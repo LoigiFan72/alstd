@@ -1,0 +1,8 @@
+# DEVELOPER #
+
+build/*
+dev/*
+priv/*
+.idea/*
+
+lib/ctr/*

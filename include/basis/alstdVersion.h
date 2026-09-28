@@ -1,0 +1,21 @@
+#ifndef ALSTD_VERSION_H
+#define ALSTD_VERSION_H
+
+#define VER_STR_(version) #version
+#define VER_STR(version) VER_STR_(version)
+
+#define ALSTD_VERSION_MAJOR 0
+#define ALSTD_VERSION_MINOR 0
+#define ALSTD_VERSION_MICRO 0
+
+#ifndef ALSTD_VERSION
+#define ALSTD_VERSION "ALEX_SDK-"VER_STR(ALSTD_VERSION_MAJOR)"_"VER_STR(ALSTD_VERSION_MINOR)"_"VER_STR(ALSTD_VERSION_MICRO)"_"
+#endif
+
+#ifndef ALSTD_VERSION_NUMBER
+#define ALSTD_VERSION_NUMBER(major, minor, micro) (((major) << 24) | ((minor) << 16)  | ((micro) << 8))
+
+#define ALSTD_CURRENT_VERSION_NUMBER ALSTD_VERSION_NUMBER(ALSTD_VERSION_MAJOR, ALSTD_VERSION_MINOR, ALSTD_VERSION_MICRO)
+#endif
+
+#endif // ALSTD_VERSION_H
